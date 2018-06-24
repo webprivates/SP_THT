@@ -22,5 +22,22 @@ class Penyakit extends CI_Controller {
 		$this->load->view('penyakit_tambah');
 	
 	}
-} 
+
+	public function edit(){
+		if (isset($_POST['submit'])) {
+			$this->Penyakit_model->edit_penyakit();
+			redirect('Penyakit/index');
+		}
+		$id = $this->uri->segment(3);
+		$data['Penyakit'] = $this->Penyakit_model->getById($id);
+		$this->load->view('penyakit_edit', $data);
+	}
+
+	public function hapus(){
+		$id = $this->uri->segment(3);
+		$this->Penyakit_model->hapus_penyakit($id);
+		redirect('Penyakit/index');
+
+	}
+}
 

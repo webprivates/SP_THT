@@ -14,8 +14,9 @@
 		<td><?php echo $data['kd_penyakit'] ?></td>
 		<td><?php echo $data['nm_penyakit'] ?></td>
 		<td>
-			<a href="#">Edit</a>
-			<a href="#">Hapus</a>
+			<a href="<?php echo site_url('/Penyakit/edit/'.$data['id'])?>">Edit</a>
+			<a href="<?php echo site_url('/Penyakit/hapus/'.$data['id'])?>">Hapus</a>
+			
 		</td>
 	</tr>
 	<?php endforeach ?>
