@@ -10,11 +10,9 @@ class Penyakit extends CI_Controller {
 	public function index()
 	{
 		///$data['penyakit_data'] =  $this-> Penyakit_model->get_penyakit();
-		$data['contents'] = 'admin/dashboard';
-		$this->load->view('templates/index',$data);
-		$data ['penyakit_data'] = $this->Penyakit_model->get_penyakit();
-		$this->load->view('penyakit_list', $data);
-		
+		$data['contents'] = 'penyakit/penyakit_list';
+		$data['penyakit_data'] = $this->Penyakit_model->get_penyakit();
+		$this->load->view('templates/index',$data);		
 	}
 
 	public function create(){
@@ -22,7 +20,8 @@ class Penyakit extends CI_Controller {
 			$this->Penyakit_model->Insert_penyakit();
 			redirect('Penyakit/index');
 		}
-		$this->load->view('penyakit_tambah');
+		$data['contents'] = 'penyakit/penyakit_tambah';
+		$this->load->view('templates/index', $data);
 	
 	}
 
@@ -33,7 +32,8 @@ class Penyakit extends CI_Controller {
 		}
 		$id = $this->uri->segment(3);
 		$data['Penyakit'] = $this->Penyakit_model->getById($id);
-		$this->load->view('penyakit_edit', $data);
+		$data['contents'] = 'penyakit/penyakit_edit';
+		$this->load->view('templates/index', $data);
 	}
 
 	public function hapus(){
