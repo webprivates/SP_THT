@@ -10,8 +10,11 @@ class Penyakit extends CI_Controller {
 	public function index()
 	{
 		///$data['penyakit_data'] =  $this-> Penyakit_model->get_penyakit();
+		$data['contents'] = 'admin/dashboard';
+		$this->load->view('templates/index',$data);
 		$data ['penyakit_data'] = $this->Penyakit_model->get_penyakit();
 		$this->load->view('penyakit_list', $data);
+		
 	}
 
 	public function create(){
@@ -39,5 +42,7 @@ class Penyakit extends CI_Controller {
 		redirect('Penyakit/index');
 
 	}
+
+
 }
 
