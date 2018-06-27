@@ -15,7 +15,12 @@
                       <li><a href="<?php echo site_url()?>/penyakit/create">Tambah Data Penyakit</a></li>
                     </ul>
                   </li>
-       
+                   <li><a><i class="fa fa-edit"></i> Gejala <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo site_url()?>/gejala">Daftar Gejala</a></li>
+                      <li><a href="<?php echo site_url()?>/gejala/create">Tambah Data Gejala</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
               <div class="menu_section">
