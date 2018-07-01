@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2018 at 12:24 AM
+-- Generation Time: Jul 01, 2018 at 04:31 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -66,7 +66,7 @@ INSERT INTO `tbl_gejala` (`id`, `kd_gejala`, `gejala`, `MB`, `MD`) VALUES
 --
 
 CREATE TABLE `tbl_penyakit` (
-  `id` int(2) NOT NULL,
+  `id` int(11) NOT NULL,
   `kd_penyakit` varchar(8) NOT NULL,
   `nm_penyakit` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -76,16 +76,15 @@ CREATE TABLE `tbl_penyakit` (
 --
 
 INSERT INTO `tbl_penyakit` (`id`, `kd_penyakit`, `nm_penyakit`) VALUES
-(0, '', 'Rinofangitis Akut'),
-(1, 'KP1', 'Otitis Media Supuratif Akut'),
-(2, 'KP2', 'Laringo Faringeal Reflux'),
-(3, 'KP3', 'Otitis Externa'),
-(4, 'KP4', 'Miringitis'),
-(5, 'KP5', 'Otitis Media Efusi'),
-(6, 'KP6', 'Rhinitis Kronis Alergi'),
-(7, 'KP7', 'Rhinitis Kronis'),
-(8, 'KP8', 'Otitis Media Kronik'),
-(9, 'KP9', 'Rhinitis Akut');
+(2, 'KP1', 'Otitis Media Supuratif Akut'),
+(3, 'KP2', 'Laringo Faringeal Reflux'),
+(4, 'KP3', 'Otitis Externa'),
+(6, 'KP4', 'Miringitis'),
+(7, 'KP5', 'Otitis Media Efusi'),
+(8, 'KP6', 'Rhinitis Kronis Alergi'),
+(9, 'KP7', 'Rhinitis Kronis'),
+(10, 'KP8', 'Otitis Media Kronik'),
+(11, 'KP9', 'Rhinitis Akut');
 
 -- --------------------------------------------------------
 
@@ -95,9 +94,16 @@ INSERT INTO `tbl_penyakit` (`id`, `kd_penyakit`, `nm_penyakit`) VALUES
 
 CREATE TABLE `user` (
   `username` varchar(30) NOT NULL,
-  `password` varchar(12) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `nm_lengkap` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `password`, `nm_lengkap`) VALUES
+('sri', '1b8f538aae6c18789ff00674d9a554b4', 'Sri Kurniyan Sari');
 
 --
 -- Indexes for dumped tables
@@ -120,6 +126,16 @@ ALTER TABLE `tbl_penyakit`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`username`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_penyakit`
+--
+ALTER TABLE `tbl_penyakit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
