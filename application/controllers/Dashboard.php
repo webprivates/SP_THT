@@ -5,7 +5,9 @@ class Dashboard extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('Penyakit_model');
+		if($this->session->userdata('is_login')==FALSE){redirect('admin');}
 	}
+	
 
 	public function index()
 	{
