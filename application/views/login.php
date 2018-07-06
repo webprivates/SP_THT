@@ -43,7 +43,6 @@
         <div class="animate form login_form">
           <section class="login_content">
             <?php echo form_open('admin/login', array('class'=>'login')); ?>
-            <form>
               <h1>Login Form</h1>
               <div>
                 <label for="username" class="sr-only">Masukkan Username</label>
@@ -54,10 +53,10 @@
                 <input type="password" id="password" name="password" class="form-control" placeholder="Password" required />
               </div>
               <div>
-                <a class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="Dashboard.php">Log in</a>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Log in</button>
                
               </div>
-              <?php echo form_close() ?>
+            <?php echo form_close() ?>
 
             
 
