@@ -39,7 +39,7 @@ class gejala extends CI_Controller {
 	public function hapus(){
 		$id = $this->uri->segment(3);
 		$this->Gejala_model->hapus_gejala($id);
-		redirect('gejala_list/index');
+		redirect('gejala/index');
 
 	}
 

@@ -10,7 +10,7 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		if($this->session->userdata('is_login')==TRUE){redirect('Dashboard');}
+		if($this->session->userdata('is_login')==TRUE){redirect('Dashboard/admin');}
 		$this->load->view('login');		
 	}
 
@@ -29,7 +29,7 @@ class Admin extends CI_Controller {
 					'is_login' => TRUE,
 					);
 				$this->session->set_userdata($data);
-				redirect('Dashboard');
+				redirect('Dashboard/admin');
 			}
 		}
 	}

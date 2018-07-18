@@ -7,6 +7,7 @@
 				<th>id</th>
 				<th>Kode Penyakit</th>
 				<th>Nama Penyakit</th>
+				<th>Nama Obat</th>
 				<th>Aksi</th>
 			</tr>
 			<?php foreach ($penyakit_data as $data): ?>
@@ -15,6 +16,7 @@
 				<td><?php echo $data['id'] ?></td>
 				<td><?php echo $data['kd_penyakit'] ?></td>
 				<td><?php echo $data['nm_penyakit'] ?></td>
+				<td><?php echo $data['nama_obat'] ?></td>
 				<td>
 					<a href="<?php echo site_url('/Penyakit/edit/'.$data['id'])?>" class="btn btn-default btn-sm" >Edit</a>
 					<a href="<?php echo site_url('/Penyakit/hapus/'.$data['id'])?>" class="btn btn-danger btn-sm">Hapus</a>

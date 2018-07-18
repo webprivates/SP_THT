@@ -16,12 +16,22 @@
                    <li><a><i class="fa fa-edit"></i> Gejala <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo site_url()?>/gejala">Daftar Gejala</a></li>
+                       <li><a href="<?php echo site_url()?>/kelompok_gejala">Kelompok Gejala</a></li>
                       <li><a href="<?php echo site_url()?>/gejala/create">Tambah Data Gejala</a></li>
                     </ul>
                   </li>
-                </ul>
+                   <li><a><i class="fa fa-edit"></i> Nilai CF <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo site_url()?>/nilai_cf">Daftar Nilai CF</a></li>
+                    </ul>
+                  </li>
+                   <li><a><i class="fa fa-edit"></i> Data Pasien <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo site_url()?>/pasien">Daftar Pasien</a></li>
+                    </ul>
+                  </li>
               </div>
-              <div class="menu_section">
+              <!-- <div class="menu_section">
                 <h3>Live On</h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
@@ -62,6 +72,6 @@
                   </li>                  
                   <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
                 </ul>
-              </div>
+              </div> -->
 
             </div>

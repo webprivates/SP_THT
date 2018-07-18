@@ -13,10 +13,11 @@ class Penyakit_model extends CI_Model {
 	public function insert_penyakit(){
 		$kd_penyakit= $this->input->post('kd_penyakit');
 		$nm_penyakit= $this->input->post('nm_penyakit');
+		$nama_obat= $this->input->post('nama_obat');
 	
-		$query = $this->db->query(" INSERT INTO tbl_penyakit (kd_penyakit, nm_penyakit)
+		$query = $this->db->query(" INSERT INTO tbl_penyakit (kd_penyakit, nm_penyakit, nama_obat)
 									VALUES
-									('$kd_penyakit','$nm_penyakit') ");
+									('$kd_penyakit','$nm_penyakit','$nama_obat') ");
 		
 		return $query;
 	}
@@ -32,8 +33,9 @@ class Penyakit_model extends CI_Model {
 		$id= $this->input->post('id');
 		$kd_penyakit= $this->input->post('kd_penyakit');
 		$nm_penyakit= $this->input->post('nm_penyakit');
+		$nama_obat= $this->input->post('nama_obat');
 
-		$query = $this->db->query(" UPDATE tbl_penyakit SET kd_penyakit='$kd_penyakit', nm_penyakit='$nm_penyakit'
+		$query = $this->db->query(" UPDATE tbl_penyakit SET kd_penyakit='$kd_penyakit', nm_penyakit='$nm_penyakit', nama_obat='$nama_obat'
 									WHERE id='$id' ");
 		return $query;
 	}

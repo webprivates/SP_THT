@@ -11,12 +11,13 @@ class Gejala_model extends CI_Model {
 	}
 
 	public function insert_gejala(){
-		$kd_penyakit= $this->input->post('kd_gejala');
-		$nm_penyakit= $this->input->post('gejala');
+		$kelompok_gejala_id= $this->input->post('kelompok_gejala_id');
+		$kd_gejala= $this->input->post('kd_gejala');
+		$gejala= $this->input->post('gejala');
 	
-		$query = $this->db->query(" INSERT INTO tbl_gejala (kd_gejala, gejala)
+		$query = $this->db->query(" INSERT INTO tbl_gejala (kelompok_gejala_id,kd_gejala, gejala)
 									VALUES
-									('$kd_gejala','$gejala') ");
+									('$kelompok_gejala_id','$kd_gejala','$gejala') ");
 		
 		return $query;
 	}
@@ -30,10 +31,11 @@ class Gejala_model extends CI_Model {
 
 	public function edit_gejala(){
 		$id= $this->input->post('id');
+		$kelompok_gejala_id= $this->input->post('kelompok_gejala_id');
 		$kd_gejala= $this->input->post('kd_gejala');
-		$gejala= $this->input->post('gejala ');
+		$gejala= $this->input->post('gejala');
 
-		$query = $this->db->query(" UPDATE tbl_gejala SET kd_gejala='$kd_gejala', gejala='$gejala'
+		$query = $this->db->query(" UPDATE tbl_gejala SET kelompok_gejala_id='$kelompok_gejala_id', kd_gejala='$kd_gejala', gejala='$gejala'
 									WHERE id='$id' ");
 		return $query;
 	}
